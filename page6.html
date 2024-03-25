@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/js" href="jsscript.js">
+	<title>count down</title>
+	<script>
+   function digitalClock() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+       //* добавление ведущих нулей */
+      if (hours < 10) hours = "0" + hours;
+      if (minutes < 10) minutes = "0" + minutes;
+      if (seconds < 10) seconds = "0" + seconds;
+        document.getElementById("id_clock").innerHTML = hours + ":" + minutes + ":" + seconds;
+        setTimeout("digitalClock()", 1000);
+   }
+  </script>
+</head>
+<body>
+	<style>
+ .css-3d-text {
+    font-size: 45px;
+    color: #ffb300;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(250,174,0),
+                 1px 1px 0 rgb(245,169,0),
+                 2px 2px 0 rgb(240,164,0),
+                 3px 3px 0 rgb(235,159,0),
+                 4px 4px 0 rgb(230,154,0),
+                 5px 5px 0 rgb(225,149,0),
+                 6px 6px 0 rgb(220,144,0),
+                 7px 7px 0 rgb(215,139,0),
+                 8px 8px 0 rgb(210,134,0),
+                 9px 9px 0 rgb(205,129,0),
+                 10px 10px  0 rgb(200,124,0),
+                 11px 11px 10px rgba(0,0,0,0.6),
+                 11px 11px 1px rgba(0,0,0,0.5),
+                 0px 0px 10px rgba(0,0,0,.2);
+ }
+
+</style>
+
+<h1></h1>
+
+	<center>
+	<font size="8">
+	<style>
+ .css-3d-text {
+    font-size: 48px;
+    color: #20ff07;
+    font-family: "Arial Black", Gadget, sans-serif;
+    text-shadow: 0px 0px 0 rgb(12,235,0),
+                 1px 1px 0 rgb(-8,215,0),
+                 2px 2px 0 rgb(-28,195,0),
+                 3px 3px  0 rgb(-48,175,0),
+                 4px 4px 3px rgba(0,0,0,0.24),
+                 4px 4px 1px rgba(0,0,0,0.5),
+                 0px 0px 3px rgba(0,0,0,.2);
+ }
+
+</style>
+</center>
+<div class="css-3d-text">до нового года осталось: </div>
+<style>
+body {
+background: #000000;
+max-width: 900px auto;
+margin: 10px auto;
+padding: 60px;
+}
+.contanier{
+	background-position: center;
+}
+.center{
+
+	text-align: center;
+	color: white;
+}
+#timer{
+
+	color: #07FFDE;
+}
+
+
+</style>
+<div class= "container"> 
+	<div class="center">
+		<h1 id="NewYear"></h1>
+		<p1 id="timer"></p1>
+	</div>
+</div>
+<script> 
+var countDownDate = new Date("jan 1, 2023 00:00:00").getTime();
+
+var countDownFunction = setInterval(function () {
+	var now = new Date().getTime();
+	var distance = countDownDate - now;
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minuts = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var second = Math.floor((distance % (1000 * 60)) / 1000);
+
+	document.getElementById("timer").innerHTML = 
+	days + "дней  " + hours + "часов  " + minuts + "минут  " + second + "секунд";
+
+	if (distance < 0){
+		clearInterval(countDownFunction);
+		document.getElementById("timer").innerHTML = "";
+		document.getElementById("NewYear").innerHTML = "С Новым Годом!";
+
+	}
+
+}, 1000)
+
+</script>  
+<div id="progressbar">
+  <div></div>
+</div>
+<font color="red" size="5">
+<a>до нового года:78%</a>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<font size="8">
+<style>
+	.contanier{
+	background-position: center;
+}
+.center{
+
+	text-align: center;
+	color: white;
+}
+#timer1{
+
+	color: #07FFDE;
+	
+}
+
+
+</style>
+<div class= "container"> 
+	<div class="center">
+		<h1 id="2024"></h1>
+		<p1 id="timer1"></p1>
+	</div>
+</div>
+<script> 
+var countDownDate1 = new Date("jan 1, 2024 00:00:00").getTime();
+
+var countDownFunction1 = setInterval(function () {
+	var now = new Date().getTime();
+	var distance = countDownDate1 - now;
+	var earth = Math.floor(distance / (1000 * 60 * 60 * 24 * 100 * 10));
+	var mouth = Math.floor(distance / (1000 * 60 * 60 * 24 * 100));
+	var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+	var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+	var minuts = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+	var second = Math.floor((distance % (1000 * 60)) / 1000);
+
+	document.getElementById("timer1").innerHTML = 
+	earth + "лет  " + mouth + "месяцев  " + days + "дней  " + hours + "часов  " + minuts + "минут  " + second + "секунд";
+
+	if (distance < 0){
+		clearInterval(countDownFunction1);
+		document.getElementById("timer1").innerHTML = "";
+		document.getElementById("2024").innerHTML = "С Новым Годом!";
+
+	}
+
+}, 1001)
+
+</script>  
+<div id="progressbar1">
+  <div></div>
+</div>
+<font color="red" size="5">
+<a>до нового года:178%</a>
+<h1></h1>
+<h1></h1>
+<font color="gray">
+<h3>creator: 𐊋ﺃ𐍆ﺁᚱⵙ𐊋₂₄</h3>
+<a href="page1.html" class="button button3">back site</a>
+
+
+
+
+		<style>
+		.button {
+    background-color: black	; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 1.2s; /* Safari */
+    transition-duration: 0.8s;
+    cursor: pointer;
+    border-radius: 8px;	
+}
+.button3 {
+    background-color: black; 
+    color: white; 
+    border: 1px solid #5B0077;
+}
+
+	.button3:hover {
+    background-color: #5B0077;
+    color: red;
+}
+</style>
+<font color="white">
+<h1> </h1>
+<h1> </h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+<h1></h1>
+</body>
+</html>

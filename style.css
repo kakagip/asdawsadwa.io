@@ -1,0 +1,72 @@
+body {
+  background: #000;
+  display: flex;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 18px;
+  align-items: center;
+  position: relative;
+  padding: 0 2px;
+  display: flex;
+  height: 40px;
+  width: auto;
+}
+
+.progress-value {
+  animation: load 240s normal forwards;
+  box-shadow: 0 10px 40px -10px #62FE74;
+  border-radius: 100px;
+  background: green;
+  height: 34px;
+  width: 10;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  8% { width: 5%; }
+    23% { width: 10%; }
+      39% { width: 15%; }
+        42% { width: 20%; }
+          57% { width: 25%; }
+            63% { width: 30%; }
+              77% { width: 31%; }
+               81% { width: 33%; }
+                 98% { width: 36%; }
+                   100% { width: 38%; }
+}
+
+#progressbar {
+  background-color: #141414;
+  border-radius: 16px;
+  /* (height of inner div) / 2 + padding */
+  padding: 1px;
+}
+/*0-25 red, 26-45 orange, 46-65 yellow, 66-80 green, 81-101 blue*/
+#progressbar>div {
+  background-color: red;
+  width: 22%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}
+
+#progressbar1 {
+  background-color: #141414;
+  border-radius: 13px;
+  /* (height of inner div) / 2 + padding */
+  padding: 1px;
+}
+
+#progressbar1>div {
+  background-color: red;
+  width: 11%;
+  /* Adjust with JavaScript */
+  height: 20px;
+  border-radius: 10px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<title>calculator</title>
+ <meta charset="utf-8">
+<head>
+<style>
+body {
+ background: #000000;
+max-width: 900px;
+margin: 10px auto;
+padding: 30px;
+}
+</style>
+<font color="red"; size="6">
+<a>CALCULATOR</a>
+</head>
+   <form name="calc" class="wrapper">
+     <div class="rama1">
+                <table class="main">
+                    <tr class="display">
+                         <td colspan="4"><input type="text" name="input"></td>
+                    </tr>
+                    <tr class="buttons">
+                         <td><input type="button" value="1" OnClick="calc.input.value += '1'"></td>
+                         <td><input type="button" value="2" OnClick="calc.input.value += '2'"></td>
+                         <td><input type="button" value="3" OnClick="calc.input.value += '3'"></td>
+                         <td><input type="button" value="+" OnClick="calc.input.value += '+'"></td>
+                    </tr>
+                    <tr class="buttons">
+                         <td><input type="button" value="4" OnClick="calc.input.value += '4'"></td>
+                         <td><input type="button" value="5" OnClick="calc.input.value += '5'"></td>
+                         <td><input type="button" value="6" OnClick="calc.input.value += '6'"></td>
+                         <td><input type="button" value="-" OnClick="calc.input.value += '-'"></td>
+                    </tr>
+                    <tr class="buttons">
+                         <td><input type="button" value="7" OnClick="calc.input.value += '7'"></td>
+                         <td><input type="button" value="8" OnClick="calc.input.value += '8'"></td>
+                         <td><input type="button" value="9" OnClick="calc.input.value += '9'"></td>
+                         <td><input type="button" value="x" OnClick="calc.input.value += '*'"></td>
+                    </tr>
+                    <tr class="buttons">
+                         <td><input type="reset" value="c" OnClick="calc.input.value = ''"></td>
+                         <td><input type="button" value="0" OnClick="calc.input.value += '0'"></td>
+                         <td><input type="button" value="=" OnClick="calc.input.value = eval(calc.input.value)"></td>
+                         <td><input type="button" value="/" OnClick="calc.input.value += '/'"></td>
+                     </tr>
+               <table>
+               </div>
+          </form>
+</table>
+</table>
+</form>
+<body>
+    <legend>
+<h1></h1>
+</body>
+<a href="page1.html" class="button1 button3">back site</a>
+<input type="button" class="button button3" value="window calc" 
+onClick='window.open("calcpage.html", "", "width=400,height=280")'>
+</legend>
+</center>
+     <style>
+          .button1 {
+    background-color: black   ; /* Green */
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 1.2s; /* Safari */
+    transition-duration: 0.8s;
+    cursor: pointer;
+    border-radius: 8px;  
+}
+.button3 {
+    background-color: black; 
+    color: white; 
+    border: 1px solid #5B0077;
+}
+
+     .button3:hover {
+    background-color: #5B0077;
+    color: red;
+}
+</style>
+<style>
+.rama1 {border:10px ridge #daa25e;
+left: auto;
+right: auto;
+height: auto;
+background-color: #2E8546; width:20%;}
+</html>

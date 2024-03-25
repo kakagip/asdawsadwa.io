@@ -1,0 +1,168 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	font-family: helvetica, arial, sans-serif;
+	cursor: default;
+	font-size:13px;	
+	color: #666;
+	outline: none;
+	border: none;
+}
+body{
+	background-color: #fdfdfd;
+}
+/* ?Y?z?’?­?  ?‘???????z??*/
+.button{
+	cursor:pointer;
+	padding: 0px 10px;
+	border:1px solid;
+	background-color: #fff;
+	
+	-webkit-transition: all 250ms linear;
+	-moz-transition: all 250ms linear;
+	-ms-transition: all 250ms linear;
+	-o-transition: all 250ms linear;
+	transition: all 250ms linear;
+	
+	
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(128,128,128, 0.1), 0px 0px 3px 0px rgba(128,128,128, 0.25);		
+	-moz-box-shadow: 0px 0px 30px 0px rgba(128,128,128, 0.1), 0px 0px 3px 0px rgba(128,128,128, 0.25);		
+	-ms-box-shadow: 0px 0px 30px 0px rgba(128,128,128, 0.1), 0px 0px 3px 0px rgba(128,128,128, 0.25);		
+	-o-box-shadow: 0px 0px 30px 0px rgba(128,128,128, 0.1), 0px 0px 3px 0px rgba(128,128,128, 0.25);		
+	box-shadow: 0px 0px 30px 0px rgba(128,128,128, 0.1), 0px 0px 3px 0px rgba(128,128,128, 0.25);		
+	
+	border-color: #ddd;
+	color: #666;
+}
+	.button:hover{
+		border-radius: 3px;
+		-webkit-box-shadow: 0px 0px 20px 0px rgba(128,128,196, 0.1), 0px 0px 2px 0px rgba(128,128,196, 0.5);
+		-moz-box-shadow: 0px 0px 20px 0px rgba(128,128,196, 0.1), 0px 0px 2px 0px rgba(128,128,196, 0.5);
+		-ms-box-shadow: 0px 0px 20px 0px rgba(128,128,196, 0.1), 0px 0px 2px 0px rgba(128,128,196, 0.5);
+		-o-box-shadow: 0px 0px 20px 0px rgba(128,128,196, 0.1), 0px 0px 2px 0px rgba(128,128,196, 0.5);
+		box-shadow: 0px 0px 20px 0px rgba(128,128,196, 0.1), 0px 0px 2px 0px rgba(128,128,196, 0.5);
+		
+		border-color: #dde;
+		color: #336;
+	}
+	.button:active{
+		-webkit-box-shadow: 0px 0px 10px 0px rgba(128,128,255, 0.1), 0px 0px 1px 0px rgba(128,128,255, 0.75);
+		-moz-box-shadow: 0px 0px 10px 0px rgba(128,128,255, 0.1), 0px 0px 1px 0px rgba(128,128,255, 0.75);
+		-ms-box-shadow: 0px 0px 10px 0px rgba(128,128,255, 0.1), 0px 0px 1px 0px rgba(128,128,255, 0.75);
+		-o-box-shadow: 0px 0px 10px 0px rgba(128,128,255, 0.1), 0px 0px 1px 0px rgba(128,128,255, 0.75);
+		box-shadow: 0px 0px 10px 0px rgba(128,128,255, 0.1), 0px 0px 1px 0px rgba(128,128,255, 0.75);
+	
+		border-color: #ddf;
+		color: #006;		
+	}
+
+.wrapper{
+	
+}
+	.header{
+		line-height:35px;
+		padding:10px;
+		text-align:right;
+	}
+		.header > h1{
+			font-size: 32px;
+			float:left;
+			margin-right: 50px;
+		}
+	
+	.menu > ul{
+		list-style-type:none;
+	}
+		.menu > ul > li{
+			display: inline-block;
+			margin-left: 8px;
+		}
+			.menu > ul > li > select > option{
+				margin-right: 20px;
+			}
+
+.shadow{
+	background-color: #fdfdfd;
+	border: 1px solid #c0c0c0;
+	-webkit-box-shadow: 0px 0px 25px 0px rgba(0,0,0, 0.1), 0px 0px 3px 0px rgba(0,0,0, 0.25);
+	-moz-box-shadow: 0px 0px 25px 0px rgba(0,0,0, 0.1), 0px 0px 3px 0px rgba(0,0,0, 0.25);
+	-ms-box-shadow: 0px 0px 25px 0px rgba(0,0,0, 0.1), 0px 0px 3px 0px rgba(0,0,0, 0.25);
+	-o-box-shadow: 0px 0px 25px 0px rgba(0,0,0, 0.1), 0px 0px 3px 0px rgba(0,0,0, 0.25);
+	box-shadow: 0px 0px 25px 0px rgba(0,0,0, 0.1), 0px 0px 3px 0px rgba(0,0,0, 0.25);
+}
+
+.footer{	
+	margin-top: 25px;
+	text-align:center;
+}
+#game{
+	padding-left:50px;
+	text-align: center;
+}
+
+/*NEED ???»N? ??N‹???????° ???° N‚?°?±?»??N‡????.*/
+
+.pg_keeper{
+	position: relative;
+	display: inline-block;
+}
+.pg_keeper > div:first-child{
+	text-align: left;
+	line-height: 25px;
+}
+.pg_keeper > div:first-child > label{
+	font-size: 10px;
+}
+.pg_keeper > div:first-child > label:last-child{
+	color: #00c000;
+}
+.pg_keeper > table{
+	
+	display: inline-block;
+	border-spacing:1px;
+	border: 1px solid #808080;
+}
+.pg_keeper > table td{
+	padding: 10px;
+	background-color: transparent;
+}
+.pg_keeper > div + table + div{
+	display: inline-block;
+	padding: 0px 10px;
+	vertical-align: top;
+}
+.pg_keeper > div + table + div > table{
+	margin-bottom: 10px;
+	border-spacing:1px;
+}
+.pg_keeper > div + table + div > table td{
+	padding: 5px;
+	background-color: transparent;
+}
+.pg_keeper  table td.red{
+	background-color: #c00000;
+}
+.pg_keeper  table td.orange{
+	background-color: #ff8000;
+}
+.pg_keeper  table td.yellow{
+	background-color: #c0c000;
+}
+.pg_keeper  table td.green{
+	background-color: #00c000;
+}
+.pg_keeper  table td.lightblue{
+	background-color: #00c0c0;
+}
+.pg_keeper  table td.blue{
+	background-color: #0000c0;
+}
+.pg_keeper  table td.violet{
+	background-color: #c000c0;
+}
+.pg_keeper > div + table + div + table{
+	border-spacing: 1px;
+	border: 1px solid red;
+	position: absolute;
+}

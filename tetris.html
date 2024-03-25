@@ -1,0 +1,106 @@
+﻿
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8" />
+	<title>Tetris</title>
+	<script type = "text/javascript" src="script.js"></script>
+	<link rel = "stylesheet" href = "style1.css" />
+</head>
+
+<div class = "wrapper">
+	<div class = "header shadow">
+		<h1>TETRIS</h1>
+		<div id = "usr" class = "menu">
+			<ul>
+				<li class = "button" style = "cursor: default;">
+					<select>
+						<option value = "1">1 Игрок</option>
+						<option selected value = "2">2 Игрока</option>
+						<option value = "4">4 Игрока</option>
+						<option value = "6">6 Игроков</option>
+						<option value = "8">8 Игроков</option>
+						<option value = "12">12 Игроков</option>
+						<option value = "14">14 Игроков</option>
+						<option value = "16">16 Игроков</option>
+						<option value = "18">18 Игроков</option>
+						<option value = "36">36 Игроков</option>
+						<option value = "75">75 Игроков</option>
+					</select>
+				</li>
+				<li class = "button">Старт/Пауза</li>
+				<li class = "button">Новая игра</li>
+			</ul>
+		</div>	
+	</div>
+
+	<div id = "game"></div>
+	<center>*Исходники найдены на просторах интернета, к написанию кода я не имею никакого отношения.
+	<br>Чрезмерное употребление ведёт к отчислению.<br><br>
+	<a href="playpage.html" > <img src="back.png" width="50px" /> </a>
+	</center>
+	
+	<!--div id = "cons" class = "footer">all'll good...</div-->
+</div>
+<script type = "text/javascript">
+window.onload = function(){
+	undefined = void 0;
+	
+	Array.prototype.cw = function(){
+		var temp = [];
+		for(var y = this.length - 1; y >= 0 ; y --){
+			for(var x = 0; x < this[y].length; x ++){
+				if(!temp[x]) temp[x] = [];		
+				temp[x][y] = this[this.length - 1 - y][x];
+			}
+		}
+		return temp;	
+	}
+
+	Array.prototype.copy = function(){
+		var copy = [];
+		for(var i = 0; i < this.length; i ++){
+			copy[i] = this[i] instanceof Array ? this[i].copy() : this[i];
+		}
+		return copy;
+	}
+
+	Array.prototype.exist = function(/* arguments */){
+		var a = this;
+		for(var i = 0; i < arguments.length; i++){
+			if(!(arguments[i] >= 0 && arguments[i] < a.length)){
+				return false;
+			}
+			if(a[arguments[i]] instanceof Array){
+				a = a[arguments[i]];
+			}else{
+				if(i >= arguments.length - 1){
+					return true
+				}
+				return false;
+			}
+		}
+		return true;
+	}
+
+	Array.prototype.rand = function(){
+		return this[Math.round(Math.random()*(this.length - 1))];
+	}
+	
+	var game = document.getElementById("game");
+	var usr = document.getElementById("usr").getElementsByTagName("LI");
+	
+	function install(){
+		Tetris.install(game, +select.options[select.selectedIndex].value);
+	}
+	
+	var select = usr[0].getElementsByTagName("SELECT")[0];
+	
+	usr[1].onclick = Tetris.onoff;
+	
+	usr[2].onclick = install;
+	
+	select.onchange = install;
+	
+	install();
+}
+</script>
